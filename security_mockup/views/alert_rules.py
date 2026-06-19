@@ -259,7 +259,9 @@ class RuleCard(QFrame):
                 "y2": self.zy2.value(),
             },
             "zone_name": self.zone_name.text(),
-            "severity": next(s for s, rb in self.sev_buttons.items() if rb.isChecked()),
+            "severity": next(
+                (s for s, rb in self.sev_buttons.items() if rb.isChecked()), "info"
+            ),
         }
 
 
@@ -268,6 +270,7 @@ class AlertRulesView(QWidget):
         super().__init__(parent)
         self.rules = load_rules()
         self.cards: list[RuleCard] = []
+        self._id_counter = len(self.rules)
 
         root = QVBoxLayout(self)
         root.setContentsMargins(20, 16, 20, 16)
@@ -311,7 +314,8 @@ class AlertRulesView(QWidget):
         card.deleteLater()
 
     def _add_rule(self):
-        new_id = f"RULE-{len(self.rules) + len(self.cards) + 1:03d}"
+        self._id_counter += 1
+        new_id = f"RULE-{self._id_counter:03d}"
         rule = {
             "id": new_id,
             "name": "新しいルール",

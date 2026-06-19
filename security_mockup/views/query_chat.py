@@ -218,6 +218,8 @@ class QueryChatView(QWidget):
             "何人": "Q-001",
             "バッグ": "Q-002",
             "不審": "Q-002",
+            "車両": "Q-003",
+            "車": "Q-003",
         }
         for kw, qid in keymap.items():
             if kw in question:

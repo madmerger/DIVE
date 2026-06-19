@@ -100,11 +100,22 @@ class VideoCanvas(QLabel):
             event.acceptProposedAction()
 
     def dropEvent(self, event):
+        player = self._find_player()
+        if player is None:
+            return
         for url in event.mimeData().urls():
             path = url.toLocalFile()
             if path.lower().endswith((".mp4", ".avi", ".mov", ".mkv")):
-                self.window().load_video_file(path)
+                player.load_video_file(path)
                 break
+
+    def _find_player(self) -> "VideoPlayerView | None":
+        w = self.parent()
+        while w is not None:
+            if isinstance(w, VideoPlayerView):
+                return w
+            w = w.parent()
+        return None
 
 
 class VideoPlayerView(QWidget):
@@ -341,6 +352,8 @@ class VideoPlayerView(QWidget):
         cap = cv2.VideoCapture(path)
         if not cap.isOpened():
             return
+        if self.cap is not None:
+            self.cap.release()
         self.cap = cap
         self.video_total = int(cap.get(cv2.CAP_PROP_FRAME_COUNT)) or 1
 
@@ -352,6 +365,6 @@ class VideoPlayerView(QWidget):
             self.csv_for_video = {}
 
         alert_frames = set(self.alert_frames) if self.csv_for_video else set()
-        self.timeline._max_frame = self.video_total
         self.timeline.set_data(self.csv_for_video or {}, alert_frames)
+        self.timeline._max_frame = max(self.timeline._max_frame, self.video_total)
         self.seek_to_frame(0)
