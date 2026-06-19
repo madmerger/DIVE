@@ -1,0 +1,38 @@
+[
+  {
+    "id": "RULE-001",
+    "name": "深夜の人物検出",
+    "enabled": true,
+    "target_classes": ["person"],
+    "condition": "count_exceeds",
+    "threshold": 1,
+    "time_window": "22:00-06:00",
+    "zone": {"x1": 50, "y1": 50, "x2": 400, "y2": 500},
+    "zone_name": "出入口エリア",
+    "severity": "warning"
+  },
+  {
+    "id": "RULE-002",
+    "name": "不審物検出",
+    "enabled": true,
+    "target_classes": ["bag", "backpack", "suitcase"],
+    "condition": "appears_in_zone",
+    "threshold": 0,
+    "time_window": null,
+    "zone": {"x1": 50, "y1": 50, "x2": 400, "y2": 500},
+    "zone_name": "出入口エリア",
+    "severity": "critical"
+  },
+  {
+    "id": "RULE-003",
+    "name": "車両進入検知",
+    "enabled": false,
+    "target_classes": ["car", "truck", "vehicle"],
+    "condition": "appears_in_zone",
+    "threshold": 0,
+    "time_window": "00:00-05:00",
+    "zone": {"x1": 300, "y1": 150, "x2": 750, "y2": 500},
+    "zone_name": "駐車場エリア",
+    "severity": "info"
+  }
+]

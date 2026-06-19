@@ -1,0 +1,48 @@
+[
+  {
+    "id": "ALT-001",
+    "rule_name": "深夜の複数人物検出",
+    "video_name": "裏口カメラ_20250618_2200.mp4",
+    "frame_idx": 120,
+    "timestamp": "2025-06-18 23:45:00",
+    "message": "深夜時間帯に2名の人物を同時検出（閾値: 1名）",
+    "severity": "warning",
+    "acknowledged": false,
+    "details": {
+      "detected_count": 2,
+      "threshold": 1,
+      "labels": ["person", "person"],
+      "scores": [0.91, 0.78]
+    }
+  },
+  {
+    "id": "ALT-002",
+    "rule_name": "不審物検出",
+    "video_name": "裏口カメラ_20250618_2200.mp4",
+    "frame_idx": 30,
+    "timestamp": "2025-06-18 22:15:00",
+    "message": "出入口付近でバッグ（不審物候補）を検出",
+    "severity": "critical",
+    "acknowledged": false,
+    "details": {
+      "detected_label": "bag",
+      "score": 0.72,
+      "zone": "出入口エリア"
+    }
+  },
+  {
+    "id": "ALT-003",
+    "rule_name": "車両進入検知",
+    "video_name": "正面カメラ_20250618_2200.mp4",
+    "frame_idx": 180,
+    "timestamp": "2025-06-19 01:20:00",
+    "message": "深夜帯に車両が駐車場エリアへ進入",
+    "severity": "info",
+    "acknowledged": true,
+    "details": {
+      "detected_label": "vehicle",
+      "score": 0.82,
+      "zone": "駐車場エリア"
+    }
+  }
+]

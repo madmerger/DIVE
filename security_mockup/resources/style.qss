@@ -1,0 +1,267 @@
+/* SecurityDIVE ダークテーマ スタイルシート */
+
+* {
+    font-family: "Segoe UI", "Yu Gothic UI", sans-serif;
+    font-size: 12px;
+    color: #eaeaea;
+    outline: none;
+}
+
+QWidget {
+    background-color: #1a1a2e;
+    color: #eaeaea;
+}
+
+/* ===== ヘッダーバー ===== */
+#HeaderBar {
+    background-color: #16213e;
+    border-bottom: 1px solid #2a2a4a;
+}
+
+#HeaderTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #eaeaea;
+}
+
+#StatusBadge {
+    background-color: #0f3460;
+    color: #00c853;
+    border: 1px solid #00c853;
+    border-radius: 10px;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* ===== サイドバー ===== */
+#Sidebar {
+    background-color: #16213e;
+    border-right: 1px solid #2a2a4a;
+}
+
+#SidebarLogo {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e94560;
+    padding: 16px 12px;
+}
+
+QPushButton#NavButton {
+    background-color: transparent;
+    color: #a0a0b0;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 13px;
+}
+
+QPushButton#NavButton:hover {
+    background-color: #0f3460;
+    color: #eaeaea;
+}
+
+QPushButton#NavButton:checked {
+    background-color: #e94560;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* ===== カード ===== */
+#Card {
+    background-color: #0f3460;
+    border: 1px solid #2a2a4a;
+    border-radius: 12px;
+}
+
+#CardTitle {
+    color: #a0a0b0;
+    font-size: 12px;
+}
+
+#KpiValue {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#SectionTitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #eaeaea;
+}
+
+/* ===== テーブル ===== */
+QTableWidget {
+    background-color: #0f3460;
+    alternate-background-color: #11305a;
+    gridline-color: #2a2a4a;
+    border: 1px solid #2a2a4a;
+    border-radius: 8px;
+    selection-background-color: #e94560;
+    selection-color: #ffffff;
+}
+
+QHeaderView::section {
+    background-color: #16213e;
+    color: #a0a0b0;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #2a2a4a;
+    font-weight: bold;
+}
+
+QTableWidget::item {
+    padding: 6px;
+}
+
+/* ===== ボタン ===== */
+QPushButton {
+    background-color: #0f3460;
+    color: #eaeaea;
+    border: 1px solid #2a2a4a;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #16213e;
+    border: 1px solid #e94560;
+}
+
+QPushButton:pressed {
+    background-color: #e94560;
+}
+
+QPushButton#PrimaryButton {
+    background-color: #e94560;
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+}
+
+QPushButton#PrimaryButton:hover {
+    background-color: #ff5a73;
+}
+
+QPushButton#DangerButton {
+    background-color: transparent;
+    color: #ff1744;
+    border: 1px solid #ff1744;
+}
+
+QPushButton#DangerButton:hover {
+    background-color: #ff1744;
+    color: #ffffff;
+}
+
+/* ===== 入力 ===== */
+QLineEdit, QTextEdit, QPlainTextEdit, QSpinBox, QComboBox, QTimeEdit, QDateEdit {
+    background-color: #16213e;
+    color: #eaeaea;
+    border: 1px solid #2a2a4a;
+    border-radius: 6px;
+    padding: 6px 8px;
+}
+
+QLineEdit:focus, QTextEdit:focus, QComboBox:focus, QSpinBox:focus {
+    border: 1px solid #e94560;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #16213e;
+    color: #eaeaea;
+    selection-background-color: #e94560;
+    border: 1px solid #2a2a4a;
+}
+
+/* ===== スクロールバー ===== */
+QScrollBar:vertical {
+    background: #1a1a2e;
+    width: 10px;
+    margin: 0;
+}
+QScrollBar::handle:vertical {
+    background: #2a2a4a;
+    border-radius: 5px;
+    min-height: 24px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #e94560;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+QScrollBar:horizontal {
+    background: #1a1a2e;
+    height: 10px;
+    margin: 0;
+}
+QScrollBar::handle:horizontal {
+    background: #2a2a4a;
+    border-radius: 5px;
+    min-width: 24px;
+}
+QScrollBar::handle:horizontal:hover {
+    background: #e94560;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0;
+}
+
+/* ===== タブ ===== */
+QTabWidget::pane {
+    border: 1px solid #2a2a4a;
+    border-radius: 8px;
+    background-color: #0f3460;
+}
+
+QTabBar::tab {
+    background-color: #16213e;
+    color: #a0a0b0;
+    padding: 8px 16px;
+    border: 1px solid #2a2a4a;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background-color: #0f3460;
+    color: #eaeaea;
+    font-weight: bold;
+    border-bottom: 2px solid #e94560;
+}
+
+/* ===== グループボックス ===== */
+QGroupBox {
+    border: 1px solid #2a2a4a;
+    border-radius: 8px;
+    margin-top: 12px;
+    padding-top: 8px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 12px;
+    padding: 0 6px;
+    color: #a0a0b0;
+}
+
+QLabel {
+    background-color: transparent;
+}
+
+QToolTip {
+    background-color: #16213e;
+    color: #eaeaea;
+    border: 1px solid #e94560;
+    padding: 4px;
+}

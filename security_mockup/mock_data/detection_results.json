@@ -1,0 +1,50 @@
+[
+  {
+    "frame_idx": 0,
+    "detections": [
+      {"label": "person", "box": [120, 80, 280, 450], "score": 0.92},
+      {"label": "car", "box": [400, 200, 680, 420], "score": 0.87}
+    ]
+  },
+  {
+    "frame_idx": 15,
+    "detections": [
+      {"label": "person", "box": [130, 75, 290, 460], "score": 0.91},
+      {"label": "person", "box": [500, 100, 620, 380], "score": 0.85},
+      {"label": "car", "box": [410, 205, 690, 425], "score": 0.88}
+    ]
+  },
+  {
+    "frame_idx": 30,
+    "detections": [
+      {"label": "person", "box": [140, 70, 300, 470], "score": 0.93},
+      {"label": "bag", "box": [250, 300, 320, 380], "score": 0.72}
+    ]
+  },
+  {
+    "frame_idx": 45,
+    "detections": [
+      {"label": "person", "box": [320, 90, 480, 460], "score": 0.89}
+    ]
+  },
+  {
+    "frame_idx": 60,
+    "detections": [
+      {"label": "person", "box": [150, 85, 310, 455], "score": 0.90}
+    ]
+  },
+  {
+    "frame_idx": 120,
+    "detections": [
+      {"label": "person", "box": [600, 100, 720, 400], "score": 0.78},
+      {"label": "person", "box": [100, 90, 250, 440], "score": 0.91}
+    ]
+  },
+  {
+    "frame_idx": 180,
+    "detections": [
+      {"label": "person", "box": [350, 60, 500, 420], "score": 0.86},
+      {"label": "vehicle", "box": [50, 250, 350, 450], "score": 0.82}
+    ]
+  }
+]
